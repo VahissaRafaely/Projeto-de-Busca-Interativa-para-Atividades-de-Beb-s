@@ -1,0 +1,260 @@
+
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Variáveis para as cores (opcional, mas facilita a manutenção) */
+:root {
+    --cor-principal: #90caf9; /* Azul claro */
+    --cor-secundaria: #a5d6a7; /* Verde claro */
+    --cor-fundo: #f5f5f5; /* Bege claro */
+    --cor-texto-principal: #333; /* Cinza escuro para o texto principal */
+    --cor-texto-secundario: #666; /* Cinza mais claro para textos secundários */
+  }
+/* Estiliza o corpo da página */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Preenche a altura total da viewport */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    display: flex;
+    min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da viewport */
+}
+/* Estilos para o header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura total da tela */
+    background-color: #f0f0f0;
+    z-index: 999; /* Garante que o menu fique acima de outros elementos */
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    padding: 1rem;
+    color: var(--cor-texto);
+    border-radius: 5px;
+}
+
+nav li {
+    margin: 0 1rem;
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #30475E; /* Muda a cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+   /* Para telas menores */
+   @media (max-width: 768px) {
+    .searchResults article {
+      width: 100%;
+    }}
+
+    /* Estiliza os títulos h1 */
+      h1 {
+        display: block;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 4rem;
+        color: var(--cor-principal)
+        
+      }
+
+/* Estiliza as seções da página */
+.searchForm{
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Alinha os itens na vertical */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 1rem; /* Espaçamento abaixo de cada seção */
+    position: relative; 
+    overflow: hidden;
+    gap: 10px;
+}
+/* Estiliza os inputs dentro das seções */
+#searchInput {
+    width: 400px; /* Largura dos inputs */
+    height: 40px;
+    border: none; /* Remove a borda padrão */
+    padding: 20px;
+    box-shadow: 1px 1px 2px rgba(254, 250, 250, 0.1); /* Sombra suave */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
+    color: #45474B; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    border-radius: 2rem; /* Borda arredondada */
+    
+}
+
+/* Estiliza os botões dentro das seções */
+#searchButton {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: inherit; /* Borda arredondada */
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-principal);
+    font-size: 1rem; /* Tamanho da fonte */
+    border-radius: 2rem; /* Borda arredondada */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+
+}
+
+/* Adiciona efeito hover ao botão de pesquisa */
+#searchButton:hover {
+    background-color: #30475E; /* Muda a cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.searchResults {
+    width: 60rem; /* Largura máxima da caixa de resultados */
+    height: 46vh; /* Altura máxima da caixa de resultados */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 0.6rem; /* Borda arredondada */
+}
+
+/* Estiliza cada item de resultado */
+.searchResults {
+    margin: 0 auto; /* Centraliza horizontalmente*/
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+.item.searchResults {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .searchResults li {
+    margin-bottom: 10px;
+  }
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.searchResults h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: var(--cor-principal)
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.searchResults a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #30475E; /* Cor do texto dos links */
+    font-weight: bold;
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.searchResults a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #45474B; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+.link-search-results {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.link-search-results:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #F5F7F8;
+    color: #45474B;
+    text-align: center;
+    padding: 0; /* Adicione um padding para criar um espaço entre o conteúdo e o rodapé */
+    font-size: 0.8rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: 768px)  {
+   
+    h1 {
+        font-size: 2rem; /* Tamanho da fonte em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+
+    }
+
+    #searchInput {
+        width: 25rem; /* Largura dos inputs em telas menores */
+        padding: 0.8rem; /* Espaçamento interno em telas menores */
+
+    }
+
+    .searchResults {
+        width: 40rem; /* Largura da caixa de resultados em telas menores */
+        height: 40vh; /* Altura da caixa de resultados em telas menores */
+
+    }
+
+    .item.searchResults h2 {
+        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
+        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+    }
+
+    #searchInput {
+        width: 17rem; /* Largura total dos inputs em telas pequenas */
+    }
+
+    #searchButton {
+        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    }
+
+    .searchResults {
+        width: 90%; /* Largura da caixa de resultados em telas pequenas */
+        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+    }
+
+    .item.searchResults h2 {
+        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Tamanho da fonte do rodapé em telas pequenas */
+
+    } }
